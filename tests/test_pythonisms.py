@@ -25,6 +25,25 @@ def test_iteration():
     assert nodes_list
 
 # @pytest.mark.skip("TODO")
+def test_list_comprehension():
+    linked_list = LinkedList(("node1", "node2", "node3"))
+
+    capital_nodes = [node.value.upper() for node in linked_list]
+
+    assert capital_nodes == ["NODE1", "NODE2", "NODE3"]
+
+# @pytest.mark.skip("TODO")
+def test_conversion():
+    reg_list = ["node1", "node2", "node3"]
+    linked_list = LinkedList(("node1", "node2", "node3"))
+    assert list(linked_list) == reg_list
+
+def test_equality():
+    linked_list_one = LinkedList(("node1", "node2", "node3"))
+    linked_list_two = LinkedList(("node1", "node2", "node3"))
+    assert linked_list_one == linked_list_two
+
+# @pytest.mark.skip("TODO")
 def test_string():
     linked_list = LinkedList(("node1", "node2", "node3"))
 
