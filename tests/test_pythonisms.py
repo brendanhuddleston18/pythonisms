@@ -28,7 +28,7 @@ def test_iteration():
 def test_list_comprehension():
     linked_list = LinkedList(("node1", "node2", "node3"))
 
-    capital_nodes = [node.value.upper() for node in linked_list]
+    capital_nodes = [node.upper() for node in linked_list]
 
     assert capital_nodes == ["NODE1", "NODE2", "NODE3"]
 
@@ -36,6 +36,7 @@ def test_list_comprehension():
 def test_conversion():
     reg_list = ["node1", "node2", "node3"]
     linked_list = LinkedList(("node1", "node2", "node3"))
+    print([node for node in linked_list])
     assert list(linked_list) == reg_list
 
 def test_equality():

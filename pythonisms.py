@@ -6,7 +6,7 @@ class LinkedList:
         self.head = None
         if collection:
             for value in reversed(collection):
-                self.insert(Node(value))
+                self.insert(value)
 
 
     def insert(self, value):
@@ -24,7 +24,7 @@ class LinkedList:
         output = ""
 
         for node in self:
-            output += f"[ {node.value} ] -> "
+            output += f"[ {node} ] -> "
 
         return output + "None"
     
